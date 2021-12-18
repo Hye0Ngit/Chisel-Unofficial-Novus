@@ -16,9 +16,11 @@ The modified version is maintained by [Hye0Ngit](https://github.com/Hye0Ngit).
 
 Differences from the original version
 --
-Forge 10.13.4.1481-1.7.10 -> 10.13.4.1614-1.7.10
+Change HTTP to HTTPS in build.gradle
 
-Gradle 2.2.1 -> 7.3.2
+[Forge](https://files.minecraftforge.net) 10.13.4.1481-1.7.10 -> 10.13.4.1614-1.7.10
+
+[Gradle](https://gradle.org) 2.2.1 -> 7.3.2
 
 All dependency mods use file, not maven.
 
