@@ -1,0 +1,425 @@
+2.9.4:
+Changes
+- Flammable stuff is now actually flammable, e.g. bookshelves, planks (Cricket)
+- Add some text to crash logs about those pesky "Unable to lookup" errors
+Fixes
+- #52 Fix not being able to chisel endstone
+- #69 Allow the Autochisel to function properly when upgrades are disabled. It will function as if it has all ugprades (except reversion).
+- Chisel-2#433 Fix andesite and granite recipes not checking for disabled diorite
+- #60 Fix crash when AE2 decorative quartz is disabled
+
+2.9.3:
+Changes
+- Beacon rendering has been improved to show the color of the beacon in the item
+- White beacon, which was identical to the vanilla one, is now the RAINBOW BEACON
+Fixes
+- #43 Top slabs are unnamed
+- Fix AT not running on new forge versions (caused things like the special item rendering in the chisel GUI to not work)
+- Fix all potential issues with the chisel GUI and blocks that take the item in your hand
+- Fix chisel not rendering correctly in caches, etc.
+- Fix chiseled beacon pick block, sub blocks, and drops
+
+2.9.2:
+Changes
+- In-world chiseling is now possible in creative
+- Update changelog looks, and some improvements to gradle script
+Fixes
+- #22 Fix crash when using shift while in-world chiseling 
+- #13 Fix buggy text rendering in chisel GUI without NEI present
+- #25 Fix gradle script for relative directories
+
+2.9.1:
+Changes
+- While holding shift, left-click chiseling order will be reversed (Cricket)
+- Concrete now has a full bounding box, and the method of speeding up the player has been redone to be much less frustrating
+Fixes
+- Fix TOPBOTSIDE blocks (like the battery) being broken and showing the top texture on the bottom
+- Fix compatibility endstone blocks being in the wrong group (minecreatr)
+API
+- Fix ChiselTabs referencing internal classes in imports
+
+2.9.0:
+Version is 2.9 while work on 3.0 is done. This is to avoid version clashes with Chisel 2.
+New
+- Concrete technical block
+Changes
+- Update to CTMLib 1.3.0
+Fixes
+- Fix blocks with stairs (ice, packed ice) not being chiselable properly.
+- Fix stairs not being chiselable
+API
+- Allow access to creative tabs
+
+CT2.5.0:
+New
+- Lots of new endstone variants
+- Purpur blocks
+- New technical blocks (piping, battery, and more)
+Changes
+- Under new management! Name of the project has been changed to "Chisel"
+- Now includes CTMLib 1.2.0-10
+- Greatly improve the look of energized voidstone
+- Retexture 2 of the voidstone variants (bevel and metalborder)
+- Removed special player rendering
+- Fixed EMC registrations so that they are actually dynamic
+- Lavastone and Waterstone now use the still texture, not flowing
+Fixes
+- Fix "The Turkey Bug"
+- Fix crash when an unchiselable item made its way into the autochisel
+- Fix VariationInfos always returning CUSTOM for their texture type
+- Fix antiblocks not working when smooth lighting is off
+- Fix Botania compat
+- Fix pick block on bookshelves
+API
+- Add IConnectable for allowing other blocks to determine if chisel blocks will connect to them
+
+2.5.0:
+New
+- Connected Textured Blocks should show in the chisel menu
+- Beacons!
+- Piping
+- 1.9 Blocks
+Changes
+- Limestone gets a new look
+- Ball of moss is cheaper
+Fixes
+- Bookshelves pick block
+- Assorted other bugs got squished
+
+2.4.1:
+New
+- New UberWavy futura block
+Changes
+- Waterstone and Lavastone will now use the still textures, not flowing
+- The voidstone render has been retouched, energized voidstone will now have CTM variants where the normal voidstone does.
+Fixes
+- Fix bad rendering code in layered items
+- Fix chisel using its own render pass variable instead of the forge provided one
+  - The above two fixes should allow EnderIO facades (and other similar blocks) to work with waterstone, lavastone, etc.
+- Fix regular voidstone ctm not working
+CTMLib
+- Fix CTM not connecting to IFacade blocks
+
+2.4.0:
+New
+- EE3 compatibility
+- Reversion upgrade for the Auto Chisel
+- Added Chiselled beacons that look a little odd, but display every color
+- You can repair chisels in an anvil with the material you made it out of\
+- Added the purple AE2 Controller
+- Localization support for planks and stained glass
+- 1.8 stones are oreDict'd
+- Added a config for the bounding box of concrete
+- Added a config to disable the tooltip of blocks that generate in your world
+Changes
+- Spice up the Hex Plating
+- Added some sandstone
+- Sandstone Scribbles are now part of sandstone
+- New "Hades" animation on the voidstone
+- Hex Plating is blast proof
+- Changed the ME Controller texture
+- Slightly changed the texture of "Rusty Grate"
+Fixes
+- Packed Ice rendering and reduced the oil on it
+- Fixed a crash with putting a chisel into storage drawers
+- Fixes a diamond dupe of sorts
+- Fixes multiple rendering crashes
+- Fixes bookshelf rendering
+API
+- CTM is now its own mod CTMLib
+
+2.3.10:
+New
+- Added ARRRRRRR-cane stone blocks
+- Added Factory varients using some old textures that were lying around
+- Added a new Glass varient: Asymmetrical Leaded Glass
+Changes
+- Chiseled Torches now work as Forge microparts
+- AntiBlocks will not allow mobs to spawn on them (like half blocks, or glass)
+Fixes
+- Fixed the Mossy configuration to properly disable/enable whether the player can chisel cobble into mossy cobble, etc.
+- Fixed some more present-nonsense
+- Fixed a crash on dedicated servers
+- Fixed an bug that allowed item duplication.  We're sorry server ops :(
+- Improved block loading performance significantly!
+
+2.3.9:
+API
+- Fixed issue where Chisel would crash if a user sent any message to the IMC
+
+2.3.8:
+New
+- Added a recipe for packed ice pillars
+- Added some Tinker's Construct variations
+- Added andesite, diorite, and granite, and a couple variations
+- Added hex armor plating and large hex plating
+- Added "Shingle" blocks
+- Added "Imperial" and "Rebel" blocks
+- Created our biggest fan :D
+Changes
+- Added iron/gold block variations to the Oredict
+- Recolored antiblocks a little
+- Chiseled pumpkins can now make snow-golems
+- Custom particles will be disabled if the vanilla "Particles:" option is set to "Off"
+- Added a search bar to Chisel's creative tab menus
+- Unified some of the technical blocks as one variation
+Fixes
+- Fixed a bug when Tinker's Construct and Botania would crash on load
+- Fixed one issue with CTM not rendering the texture properly
+- Corrected masonry texture references
+- Chiseled bookshelves drop the correct book now
+- Fixed compatibility with Project Red's Marble Bricks
+- Fixed stair placement, and tooltip bugs
+- Chiseled half-slabs noe behave like vanilla's when it comes to redstone
+- Pumpkins and Jack o Lanterns now play the correct sounds
+- Fixed an old crash with Railcraft
+- Fixed missing localizations for road lines
+- Fixed a bug when rendering several types of Pillars
+- Fixed a bug that accidentally let the auto-chisel chisel things it shouldn't
+API
+- Extended CTM to the API... however this still need some work
+
+2.3.7:
+Changes
+- Updated russian translation
+Fixes
+- Fixed a serious bug allowing left-click chiseling to change blocks to incorrect types
+
+2.3.6:
+New
+- Rewrote presents, now function properly as double chests (better than vanilla!)
+- Add metal blocks, varaitions for aluminum, bronze, lead, silver, steel, tin, and uranium
+- Config options for hex block colors
+- 2 Valentine's blocks
+Changes
+- Antiblocks and other colored blocks can now be chiseled between
+- New malfunctioning fan texture
+- V4 and V9 textures will now tile instead of staircase
+Fixes
+- Fixed some render issues with ice/icepillars
+- Crash with some IFacade blocks next to columns
+- Fix harvest levels of all blocks
+- Fix compatability with Railcraft 9.5.X
+- Fix crashes with creative tabs
+API
+- Add IMC for major API functions
+
+2.3.5:
+Fixes
+- Fix crash with copper block feature
+
+2.3.4:
+New
+- Add config to prevent chiseling between vanilla leaf types
+- Use vanilla 1.8 textures for the 1.8 blocks, implement 1.8 block pillars
+- Add new yellow brick type
+- Add chisling between different copper block types
+Fixes
+- All blocks now have proper breaking animations
+- #175 Fix bad texture on bottom sides of CTMV blocks
+- #168 Fix only one type of block generating per world
+- #176 Fix bad aged brick texture
+- #174 Fix chiseling stained glass always giving white variations
+API
+- Add ability for custom chisels to define their own modes
+- Add support for removing variations and groups via the API
+
+2.3.3:
+Fix crash when left clicking certain blocks with the chisel
+
+2.3.2:
+Fixed antiblocks being chiselable between colors
+Added recipes to dye existing antiblocks
+Made all recipes that use dyes support oredict dyes
+Fixed left click chiseling not going through oredict members of the group
+
+2.3.1:
+Fixed recipe crash on startup
+
+2.3:
+Fixed issues with stairs
+NEI Handler for seeing how to obtain all the blocks
+Fixed sand having the wrong sound
+Fixed some assorted rendering and lighting issues
+Brand new Auto Chisel
+Recipes for the upgrades are now available
+Brand new Chisel GUI
+Added antiblocks
+Chisel Modes and left click!
+
+2.2.2:
+Diamond Chisel implemented while still retaining the iron chisel if diamond is disabled
+Added OCD Blocks
+Added Blood magic support
+Pumpkin is brighter
+Cryogenic Sign added
+Facades will connect textures
+1.8 world generation added, they don't have too many variations atm
+Spelling fixes
+updated Russian Language
+Creative tabs are now better sorted
+
+2.2.1:
+Fixed Presents not rendering correctly, and combined their inventories properly
+Various bits of texture work
+Removed Chisel left click
+Added various missing hardness/resistance values to blocks (signs included)
+Added missing recipe for technical blocks
+Added missing lightValue to torches
+French language support
+Made preparations for some Arcane Blocks
+
+2.2.0:
+Added Grimstone
+Added non purple fantasy blocks
+Added more variations to dark oak and accacia
+Added Pumpkins
+Added Jack-O-Lanterns
+Added Hex Plating
+Added Technical Blocks
+Added Christmas Present
+Added Warning Signs
+Added Torches
+British English and Pirate Language support
+Fixed the waterstone bug
+Fixed the Fantasy Pilla'
+Auto Chisel is upgradable and contains all fixes
+Major package refactor
+Tiny bug fixes here and there
+Compatibility with Colored Lights mod
+voidstone changes
+
+2.1.3:
+New voidstone textures:
+Fixes the connected textures crash
+Auto Chisel now drops inventory on block break
+
+2.1.2:
+Fixes texture issues
+
+2.1.1:
+Added Waterstone
+Fixed light going through blocks
+Fixed lang file
+Fixed Smashing Rock
+
+2.1.0:
+Leaves
+Setting up for christmas delight
+Auto chisel fixes and new render system for next update
+Worlds now transfer
+
+2.0.0.4:
+Fixes invisible block
+
+2.0.0.3:
+Fixes the dupe glitch and other small bugs
+
+2.0.0.2:
+Added more localization
+Fixes items in the auto chisel crashing the game
+Fixes server side crash with FMP
+Added more voidstone and lavastone
+
+2.0.0.1:
+Fixes creative tab naming
+
+2.0:
+Added the Auto Chisel
+Code Refactor
+Code Cleanup
+
+Pokefenn's changes:
+
+1.5.7:
+Added the Laboratory block, a fancy new block added by GravitasShortfall
+Fixed issues with left clicking with the Chisel, thanks to Lordmau5/Konata
+Some locale things added so its not all only english.
+Fixes issues with crafting with sandstone blocks.
+Potentially fixes a issue with marble/limestone generation on multiplayer.
+
+1.5.6b
+Fixed ice pillar crafting issue.
+Sounds work now.
+Bluepower support for marble (Haven't tested due to time issues <,<)
+Project Red support for marble fixed.
+Fixed the config for the Chisel crafting recipe.
+
+1.5.6a
+Correct render for Lavastone.
+Stained Glass can now be made.
+Waila for block descriptions (Thanks to Parker8283 for the PR :3 )
+Fixed configuration for world generation
+
+1.5.6
+Woolen Clay, textures by the all mighty shoop :)
+Japanese Paperwalls! Textures by Sayomi_Inoue
+Config for allowing you to create mossy brick from stone.
+Maybe I'm trying to confuse you again?
+
+1.5.5a
+Fixed the unintended feature of crashing on servers.
+Maybe a secret hidden? Or i just feel like messing with you.
+
+1.5.5
+Major parts of this update is brought to you by Zombiepig333, so go thank him :)
+Config for the amount of factory blocks you get.
+Half done locale support (For some block descriptions and the names)
+Works on 1.7.10 now, no crashes from AABB changes.
+Few bug fixes.
+
+1.5.4g
+Fixed the latest crash with random items in the chisel inventory, will require Forge 1126 or above now.
+Fixed dirt blocks being able to give you blocks with no texture, this will shift the metadata in world, though!
+Few derps with the crafting stuff, now uses FMLs implementation of it.
+
+1.5.4f
+Fixed a crash with the latest forge, you will now need to use the latest recommended :)
+Recipe for the road marker thingy.
+Fixed the dirt block issues.
+PR from anti334 that changes how the connected textures working, making them work better.
+
+1.5.4e
+Fixed the issue of glowstone dropping the wrong metadata.
+Added in gregs suggestion of gem/metal blocks being usable in beacon bases
+
+1.5.4d
+Fixed a derp with nether brick not being carvable, thanks to Soaryn for finding that derp :P
+
+1.5.4c
+Fixed a crash bug with Carpenter's Blocks.
+Updated compatibility with Mariculture.
+
+1.5.4b
+Fixed a small issue, thanks to tambry, this is the problem of taking over mods >.>
+
+1.5.4a:
+Lavastone now emits light.
+Fixed issue with slabs, they can't be placed on the top of a block, will rewrite them soon.
+Noticed weird version issues >.>
+Fixed minor bugs
+Removed redundant System.out.println
+Smashing Rock is there, without texture and uncraftable, just ignore it for now :)
+
+1.5.4:
+Fixed a few crashes client side with the Moss and Cloud projectile.
+Removed AsieLib dependancy.
+Added in a config option for cloud rendering.
+Fixed a few misc bugs.
+
+Asies changes:
+
+1.5.3 (18 March 2014)
+Added: Far more config-level configurability for the mod's available features and behaviour.
+Changed: The config format. Cleaned it up a bit. Watch out!
+Fixed: Marble stairs and limestone stairs now work!
+Fixed: Partially attempted to fix the left-click-with-chisel to make block disappear bug.
+1.5.2 (17 March 2014)
+Added: Chiselable Stained Glass and Stained Glass Panes.
+Changed: Textures are now compressed with pngout, cutting the mod's size from 4MB to 2.1MB - an almost 50% reduction!
+Changed: The internal mod-specific names used in the GameRegistry. worlds saved with Chisel 1.5.1 will *not* be compatible, and worlds saved with Minecraft 1.6.4 and below probably will not convert perfectly as well, but this was done for the better - mod collisions could've and would've happened otherwise.
+Fixed: NPE with certain blocks' rendering.
+1.5.1 (16 March 2014)
+Ported to Minecraft 1.7.2.
+Added: Support for Acacia and Dark Oak planks.
+Removed: Overriding vanilla blocks.

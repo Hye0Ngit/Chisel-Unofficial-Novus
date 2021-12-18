@@ -1,0 +1,16 @@
+[
+{
+  "modid": "chisel",
+  "name": "Chisel Unofficial: Novus",
+  "description": "A mod that adds in many fancy blocks for decoration, which are crafted utilising the Chisel.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://www.minecraftforum.net/forums/thread/1294901",
+  "updateUrl": "",
+  "authorList": [ "tterrag", "Drullkus", "minecreatr", "Hye0Ngit" ],
+  "credits": "AUTOMATIC_MAIDEN for the original mod,\nasie for porting to 1.7.2,\nand Pokenfenn/Cricket for continuing it in 1.7.\nThis mod uses textures from the Painterly Pack: http://painterlypack.net/. Hye0Ngit port to newer environment",
+  "logoFile": "/banner.jpg",
+  "screenshots": [],
+  "dependencies": []
+}
+]
