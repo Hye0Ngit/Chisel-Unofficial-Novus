@@ -41,7 +41,7 @@ All dependency mods use file, not maven.
 Pull Requests
 --
 
-Pull requests with new features, translations, and bugfixes are very welcome. Please make sure to always submit PRs against the ***dev*** branch, not master.
+Pull requests with new features, translations, and bugfixes are very welcome.
 
 Do not make PRs that are solely formatting or other aesthetic things.
 
